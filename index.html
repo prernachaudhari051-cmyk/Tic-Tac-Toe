@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe Deluxe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Confetti Canvas for Victory Celebration -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="game-container">
+    <header>
+      <div class="header-top">
+        <h1>Tic-Tac-Toe</h1>
+        <button id="btn-sound-toggle" class="btn-icon" title="Toggle Sound" aria-label="Toggle Sound">
+          🔊
+        </button>
+      </div>
+      <p class="subtitle">Play with friends or challenge the Unbeatable AI</p>
+
+      <!-- Game Mode Selector -->
+      <div class="mode-selector">
+        <button class="mode-btn active" data-mode="pvp">2 Players</button>
+        <button class="mode-btn" data-mode="ai-easy">AI (Easy)</button>
+        <button class="mode-btn" data-mode="ai-hard">AI (Unbeatable)</button>
+      </div>
+    </header>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <div class="score-card player-x">
+        <span class="label" id="label-x">Player X</span>
+        <span class="score" id="score-x">0</span>
+      </div>
+      <div class="score-card ties">
+        <span class="label">Ties</span>
+        <span class="score" id="score-ties">0</span>
+      </div>
+      <div class="score-card player-o">
+        <span class="label" id="label-o">Player O</span>
+        <span class="score" id="score-o">0</span>
+      </div>
+    </div>
+
+    <!-- Status Banner -->
+    <div class="status-banner" id="status-text">
+      Player <span class="highlight-x">X</span>'s Turn
+    </div>
+
+    <!-- 3x3 Game Board Grid -->
+    <div class="board" id="board">
+      <button class="cell" data-cell-index="0" aria-label="Cell 1"></button>
+      <button class="cell" data-cell-index="1" aria-label="Cell 2"></button>
+      <button class="cell" data-cell-index="2" aria-label="Cell 3"></button>
+      <button class="cell" data-cell-index="3" aria-label="Cell 4"></button>
+      <button class="cell" data-cell-index="4" aria-label="Cell 5"></button>
+      <button class="cell" data-cell-index="5" aria-label="Cell 6"></button>
+      <button class="cell" data-cell-index="6" aria-label="Cell 7"></button>
+      <button class="cell" data-cell-index="7" aria-label="Cell 8"></button>
+      <button class="cell" data-cell-index="8" aria-label="Cell 9"></button>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn-restart" id="btn-restart">Restart Game</button>
+      <button class="btn-reset-scores" id="btn-reset-scores">Reset Scores</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
